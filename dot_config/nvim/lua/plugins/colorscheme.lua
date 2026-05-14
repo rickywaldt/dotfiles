@@ -1,5 +1,3 @@
-vim.o.background = "dark"
-
 return {
 	{
 		"ellisonleao/gruvbox.nvim",
