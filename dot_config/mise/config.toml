@@ -1,3 +1,4 @@
 [tools]
+usage = "latest"
 bat = "latest"
 chezmoi = "latest"
