@@ -74,11 +74,13 @@ if command -v bat > /dev/null ; then
   alias cat="bat"
 fi
 
-# ls
-alias ll="ls -lgh"
-alias la='ls -lathr'
-alias lla='ls -lgha'
-alias lt='ls --tree'
+if command -v lsd > /dev/null ; then
+  alias ls="lsd"
+  alias ll="ls -lgh"
+  alias la='ls -lathr'
+  alias lla='ls -lgha'
+  alias lt='ls --tree'
+fi
 
 # git
 alias gs='git status'
@@ -86,4 +88,3 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
-
