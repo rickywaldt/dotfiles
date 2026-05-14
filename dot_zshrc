@@ -18,6 +18,10 @@ else
 fi
 autoload -U promptinit; promptinit
 
+PURE_GIT_PULL=0
+PURE_PROMPT_SYMBOL='❯'
+PURE_PROMPT_VICMD_SYMBOL='❮'
+
 prompt pure
 
 
