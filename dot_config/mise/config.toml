@@ -2,3 +2,7 @@
 usage = "latest"
 bat = "latest"
 chezmoi = "latest"
+ripgrep = "latest"
+fzf = "latest"
+fd = "latest"
+lsd = "latest"
