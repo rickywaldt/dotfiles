@@ -1,1 +1,13 @@
+# ls
+alias ll='ls -l'
+alias la='ls -la'
+
+# git
+alias gs='git status'
+alias ga='git add'
+alias gcm='git commit -m'
+alias gp='git push'
+alias gpl='git pull'
+
+# mise
 eval "$(mise activate zsh)"
