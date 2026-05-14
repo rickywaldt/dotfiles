@@ -45,6 +45,11 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# GitHub token
+if command -v gh >/dev/null 2>&1; then
+  export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
+fi
+
 # Mise
 if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
