@@ -75,7 +75,6 @@ if command -v bat > /dev/null ; then
 fi
 
 # ls
-alias ls="lsd"
 alias ll="ls -lgh"
 alias la='ls -lathr'
 alias lla='ls -lgha'
