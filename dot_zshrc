@@ -21,11 +21,6 @@ autoload -U promptinit; promptinit
 prompt pure
 
 
-# enable zsh vi-mode
-bindkey -v
-export KEYTIMEOUT=1 # make switching between modes faster
-
-
 # ~~~~~~~~~~~~~~~ Environment Variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
