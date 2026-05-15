@@ -100,3 +100,14 @@ alias ga='git add'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gpl='git pull'
+
+# Tmux
+
+autoload -Uz add-zsh-hook
+
+tmux_rename() {
+  [[ -n "$TMUX" ]] || return
+  tmux rename-window "#{b:pane_current_path}" 2>/dev/null
+}
+
+add-zsh-hook precmd tmux_rename
