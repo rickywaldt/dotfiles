@@ -2,20 +2,23 @@
 
 set -euo pipefail
 
+# If zsh is installed, then make zsh default shell
 if command -v zsh >/dev/null; then
-    sudo chsh -s $(command -v zsh) $USER
+  sudo chsh -s $(command -v zsh) $USER
 fi
 
+# Create .zsh dir if it doesn't exist
 if [ ! -d "$HOME/.zsh" ]; then
   mkdir -p "$HOME/.zsh"
 fi
 
-# Check if pure is already installed
+# Install pure prompt if it's not yet installed
 if [ ! -d "$HOME/.zsh/pure" ]; then
   git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 fi
 
-if ! command -v chezmoi > /dev/null; then
+# Download and install chezmoi in .local/bin if it's not yet installed and clone my dotfiles
+if ! command -v chezmoi >/dev/null; then
   sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:rickywaldt/dotfiles.git
 fi
 
