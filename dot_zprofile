@@ -1,6 +1,11 @@
 
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
+export PATH="$HOME/.local/bin:$PATH"
+
+export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
+export GITHUB_API_TOKEN="$GITHUB_TOKEN"
+
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
