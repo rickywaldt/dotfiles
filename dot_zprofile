@@ -5,7 +5,6 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH"
 
-export GITHUB_USERNAME="$(gh api user --jq .login)"
 export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
 export GITHUB_API_TOKEN="$GITHUB_TOKEN"
 
