@@ -48,6 +48,7 @@ fi
 # GitHub token
 if command -v gh >/dev/null 2>&1; then
   export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
+  export GITHUB_USERNAME="$(gh api user --jq .login)"
 fi
 
 # Mise
