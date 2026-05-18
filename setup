@@ -19,7 +19,7 @@ fi
 
 # Download and install chezmoi in .local/bin if it's not yet installed and clone my dotfiles
 if ! command -v chezmoi >/dev/null; then
-  sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply git@github.com:rickywaldt/dotfiles.git
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin init --apply $GITHUB_USER
 fi
 
 exit 0
