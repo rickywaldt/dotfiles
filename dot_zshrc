@@ -56,10 +56,6 @@ if command -v mise >/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-# Kubectl
-if command -v kubectl > /dev/null; then
-  source <(kubectl completion zsh)
-fi
 
 # ~~~~~~~~~~~~~~~ Completion ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -79,6 +75,10 @@ if command -v mise > /dev/null ; then
   source <(mise completion zsh)
 fi
 
+# Kubectl
+if command -v kubectl > /dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
 
