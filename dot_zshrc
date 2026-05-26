@@ -124,3 +124,7 @@ tmux_rename() {
 }
 
 add-zsh-hook precmd tmux_rename
+
+# Disable vi mode
+
+bindkey -e
