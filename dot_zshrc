@@ -114,6 +114,9 @@ alias kd='kubectl describe'
 alias ke='kubectl exec -it'
 alias kn='kubens'
 
+# flux kustomize
+alias fgk='flux get kustomizations'
+
 # Tmux
 
 autoload -Uz add-zsh-hook
